@@ -1,0 +1,37 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        connection:
+          driver_class: org.postgresql.Driver
+
+  logging:
+    level:
+      org.springframework.security: DEBUG
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommercedb
+    username: postgres
+    password: A123456
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    user:
+      name: admin
+      password: admin123
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: file:///C:/Users/suzan/Downloads/public_key.pem
+
+  custom:
+    issuer-uri: http://localhost:8080/api/auth/login
+    key-pair:
+      id: 9de350f1-246e-408b-8da8-92512584c555
+      private_key: C:/Users/suzan/Downloads/private_key.pem
+      public_key: C:/Users/suzan/Downloads/public_key.pem
