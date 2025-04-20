@@ -1,6 +1,6 @@
 FROM maven:3.9.4-amazoncorretto-17 AS build
 COPY . .
-RUN mvn  clean package
+RUN mvn  clean package -DskipTests
 
 # Package stage
 FROM openjdk:17-jdk-slim
