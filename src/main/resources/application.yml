@@ -15,10 +15,9 @@ spring:
       org.springframework.security: DEBUG
 
   datasource:
-    url: jdbc:postgresql://ecommercedb_3mlg_user:Ra7qJA50on6JINYl9c1bG6Jijd1isuQv@dpg-d02lgquuk2gs73ekg07g-a/ecommercedb_3mlg
+    url: jdbc:postgresql://dpg-d02lgquuk2gs73ekg07g-a/ecommercedb_3mlg
     username: ecommercedb_3mlg_user
     password: Ra7qJA50on6JINYl9c1bG6Jijd1isuQv
-
 
   security:
     user:
