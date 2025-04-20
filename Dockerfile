@@ -1,5 +1,5 @@
 FROM maven:3.9.4-amazoncorretto-17 AS build
-COPY src /home/app/src
+COPY . .
 RUN mvn  clean package
 
 # Package stage
