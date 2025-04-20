@@ -26,6 +26,13 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class OrderController {
     final private OrderService orderService;
+    @GetMapping("test")
+    public String test(){
+
+        return "Helllo";
+    }
+
+
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<OrderDto> createOrder(@RequestBody OrderRequestDto payload){
@@ -38,7 +45,6 @@ public class OrderController {
         return ResponseEntity.ok("Order cancelled");
     }
     @GetMapping("/me/{customerId}")
-
     //Todo  change customerID
     public ResponseEntity<List<OrderDto>> findMyOrders(@PathVariable UUID customerId){
         try {
