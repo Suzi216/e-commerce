@@ -26,12 +26,21 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          public-key-location:
+          public-key: |
+            -----BEGIN PUBLIC KEY-----
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzrcVyit+gvxxn31rI8Jn
+            9JV1uSNr1Nax5jbjVXoO4dbTH1F8onFdctFUGhNgXjwAB4vst/RT3lmHycevm+Mp
+            X8VB1oj/OLMjwjAzgxD8pX23uWI8ACe+nH5fRBZhUoXOPDE2iRosgPEKb+ZUcpao
+            8C7KUVnD0UsL5OylMMHVzugwAPrMenAUtosncsK3uXshRRPGwHGaFz7T01u8zDJk
+            2u2fqmlWV8oZfRz8y2iwh++DoBVXF9s736wBN7OzcCT8sbIFGlLg0FW3Bhl9mqGc
+            AfMJit8I6baZhydqndXFUMT21TN3+FwzPy//soSK7txshNRVSVKEbuU99PJETBvc
+            3QIDAQAB
+            -----END PUBLIC KEY-----
 
-  custom:
-    issuer-uri: http://localhost:8080/api/auth/login
-    key-pair:
-      id: 9de350f1-246e-408b-8da8-92512584c555
-      private_key: C:/Users/suzan/Downloads/private_key.pem
-      public_key: C:/Users/suzan/Downloads/public_key.pem
+#  custom:
+#    issuer-uri: http://localhost:8080/api/auth/login
+#    key-pair:
+#      id: 9de350f1-246e-408b-8da8-92512584c555
+#      private_key: C:/Users/suzan/Downloads/private_key.pem
+#      public_key: C:/Users/suzan/Downloads/public_key.pem
 
