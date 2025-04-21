@@ -28,7 +28,7 @@ public class ShoppingCartController {
     }
 
     @PostMapping("/add")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<ShoppingCartDto>  addProductToCart(@RequestParam UUID productId, @RequestParam UUID customerId,
                                                        @RequestParam int quantity){
         try {
@@ -39,7 +39,7 @@ public class ShoppingCartController {
         }
     }
     @DeleteMapping("/remove")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<ShoppingCartDto> removeProductFromCart(@RequestParam UUID productId, @RequestParam UUID customerId){
         try {
             ShoppingCartDto shoppingCartDto=shoppingCartService.removeProductFromCart(productId,customerId);
@@ -49,7 +49,7 @@ public class ShoppingCartController {
         }
     }
     @GetMapping("/{customerId}/products")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<List<ProductCartDto>> getCartProducts(@PathVariable UUID customerId){
         try {
             List<ProductCartDto> products=shoppingCartService.getCartProducts(customerId);

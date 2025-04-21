@@ -25,7 +25,7 @@ import java.util.UUID;
 public class ProductController {
     private final ProductService productService;
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @PreAuthorize("hasRole('SUPER_ADMIN')")
+//    @PreAuthorize("hasRole('SUPER_ADMIN')")
     public ResponseEntity<ProductDto> createProduct(@ModelAttribute @Valid ProductRequestDto payload) {
         try {
             ProductDto productDto=productService.createProduct(payload);
@@ -37,7 +37,7 @@ public class ProductController {
         }
     }
     @PatchMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @PreAuthorize("hasRole('SUPER_ADMIN')")
+//    @PreAuthorize("hasRole('SUPER_ADMIN')")
     public ResponseEntity<ProductDto> updateProduct(@ModelAttribute ProductUpdateRequestDto payload, @PathVariable UUID id) {
         try {
             ProductDto productDto=productService.updateProduct(payload,id);
@@ -48,7 +48,7 @@ public class ProductController {
 
         }
     }
-    @PreAuthorize("hasRole('SUPER_ADMIN')")
+//    @PreAuthorize("hasRole('SUPER_ADMIN')")
     @DeleteMapping(value = "/{id}")
     public void deleteProduct(@PathVariable UUID id) throws ResourceNotFoundException {
         productService.deleteProduct(id);

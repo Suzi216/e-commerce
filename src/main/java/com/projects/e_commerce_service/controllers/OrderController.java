@@ -34,12 +34,12 @@ public class OrderController {
 
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<OrderDto> createOrder(@RequestBody OrderRequestDto payload){
         return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOrder(payload));
     }
     @PutMapping("/{orderId}")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<String> cancelOrder(@PathVariable UUID orderId) throws ResourceNotFoundException {
         orderService.cancelOrder(orderId);
         return ResponseEntity.ok("Order cancelled");
