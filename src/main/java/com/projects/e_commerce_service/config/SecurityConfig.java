@@ -44,9 +44,9 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // No sessions (for JWT or API tokens)
                 )
 //                .oauth2ResourceServer(oauth2 -> oauth2.jwt()); // Enable Basic Authentication (Optional)
-                // .oauth2ResourceServer(oauth2 -> oauth2
-                // .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))); // Apply JWT converter
-                .httpBasic(); // Or just comment the entire oauth2ResourceServer line
+                .oauth2ResourceServer(oauth2 -> oauth2
+                .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))); // Apply JWT converter
+                // .httpBasic(); // Or just comment the entire oauth2ResourceServer line
 
 
         return http.build();
