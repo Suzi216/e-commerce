@@ -37,8 +37,8 @@ spring:
             3QIDAQAB
             -----END PUBLIC KEY-----
 
- custom:
-   issuer-uri: https://e-commerce-p0at.onrender.com
+ # custom:
+ #   issuer-uri: https://e-commerce-p0at.onrender.com
 #    key-pair:
 #      id: 9de350f1-246e-408b-8da8-92512584c555
 #      private_key: C:/Users/suzan/Downloads/private_key.pem
