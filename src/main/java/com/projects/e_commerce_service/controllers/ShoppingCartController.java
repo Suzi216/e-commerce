@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -61,7 +61,7 @@ public class ShoppingCartController {
     }
 
     @DeleteMapping("/clear/{customerId}")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public  void clearCart(@PathVariable UUID customerId) throws ResourceNotFoundException {
             shoppingCartService.clearCart(customerId);
 
